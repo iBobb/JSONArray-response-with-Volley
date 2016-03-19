@@ -1,6 +1,6 @@
-public void downloadEvents(String urlService, Response.Listener<JSONArray> successListener, Response.ErrorListener errorListener) {
+public void donwloadData(String urlService, Response.Listener<JSONArray> successListener, Response.ErrorListener errorListener) {
         //final List<Event> myEventsList = eventsList;
-        RequestQueue requestQueue = this.volleySingleton.getRequestQueue();
+        RequestQueue requestQueue = VolleySingleton.getInstance().getRequestQueue();
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, urlService, null, successListener, errorListener);
       
