@@ -1,4 +1,4 @@
-public void donwloadData(String urlService, Response.Listener<JSONArray> successListener, Response.ErrorListener errorListener) {
+public void downloadData(String urlService, Response.Listener<JSONArray> successListener, Response.ErrorListener errorListener) {
         //final List<Event> myEventsList = eventsList;
         RequestQueue requestQueue = VolleySingleton.getInstance().getRequestQueue();
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
