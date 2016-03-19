@@ -33,8 +33,8 @@
             }
         };
     }
-    
-       private void extractJsonToList(JSONArray result) { // and NOTIFIES ADAPTER for each item inserted
+    // extract the Json data from each object and NOTIFY ADAPTER for each item inserted in our List
+       private void extractJsonToList(JSONArray result) { // result should be the response we got from our onResponse method
         try {
 
             for (int i = 0; i < result.length(); i++) {
@@ -44,7 +44,7 @@
                 String body = eventJson.getString("EventBody");
 
 
-                DataClass myData = new DataClass(eventID, title, body, price, date, startTime, endTime, durationStr, place, organ);
+                DataClass myData = new DataClass(parameter1, parameter2); //parameters for the constructor of your DataClass used to create an Object of your data type
                 myList.add(myData);
                 rAdapter.notifyItemInserted(i); // your RecyclerView adapter for example
             }
